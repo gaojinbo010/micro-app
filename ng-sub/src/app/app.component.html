@@ -1,0 +1,14 @@
+<h1>ng-sub app</h1>
+
+<a routerLink="/dev" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [queryParams]="{debug: true}"
+  queryParamsHandling="merge">
+  => dev
+</a>
+
+
+<a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [queryParams]="{debug: true}"
+  queryParamsHandling="merge">
+  => home
+</a>
+
+<router-outlet></router-outlet>

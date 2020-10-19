@@ -1,0 +1,27 @@
+{
+    "name": "micro-app",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "app:install": "npm-run-all --parallel install:*",
+        "app:start": "npm-run-all --parallel start:*",
+        "//app:install": "----所有应用脚本安装----",
+        "install:main": "cd ./main && yarn",
+        "install:webbase": "cd ./webbase && yarn",
+        "install:ngsub": "cd ./ng-sub && yarn",
+        "install:vuesub": "cd ./vue-sub && yarn",
+        "install:reactsub": "cd ./react-sub && yarn",
+        "//app:start": "----启动所有子应用脚----",
+        "start:ngsub": "cd ./ng-sub && yarn start",
+        "start:vuesub": "cd ./vue-sub && yarn start",
+        "start:reactsub": "cd ./react-sub && yarn start",
+        "//main:serve": "----启动基座应用----",
+        "main:serve": "cd ./main && yarn start",
+        "//webbase:serve": "----启动另一个基座项目----",
+        "webbase:serve": "cd ./webbase && yarn start"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "npm-run-all": "^4.1.5"
+    }
+}
